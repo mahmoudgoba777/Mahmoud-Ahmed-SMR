@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909"><meta name="description" content="Mahmoud Ahmed — Founder & CEO, SMR Success Marketing Real Estate.">
+<title>Mahmoud Ahmed | SMR</title><link rel="icon" href="assets/smr-logo.png"><link rel="stylesheet" href="styles.css">
+</head><body><main class="card"><div class="topline"></div>
+<header class="brand"><img class="logo" src="assets/smr-logo.png" alt="SMR Success Marketing Real Estate logo">
+<div class="brand-name">SMR</div><div class="brand-sub">SUCCESS MARKETING REAL ESTATE</div><div class="gold-rule"></div></header>
+<div class="language-switch"><button class="lang active" id="enBtn" type="button">English</button><button class="lang" id="arBtn" type="button">العربية</button></div>
+<section class="identity" id="identity" lang="en" dir="ltr">
+<p class="eyebrow" data-en="REAL ESTATE • MARKETING • INVESTMENT" data-ar="العقارات • التسويق • الاستثمار">REAL ESTATE • MARKETING • INVESTMENT</p>
+<h1 data-en="Mahmoud Ahmed" data-ar="محمود أحمد">Mahmoud Ahmed</h1>
+<p class="role" data-en="Founder &amp; CEO" data-ar="المؤسس والرئيس التنفيذي">Founder &amp; CEO</p>
+<p class="company" data-en="SMR — Success Marketing Real Estate" data-ar="SMR — سكسيس ماركتنج للعقارات">SMR — Success Marketing Real Estate</p></section>
+<nav class="actions" aria-label="Contact actions">
+<a class="action primary" href="tel:+201026633202">☎ <span data-en="Call Mobile 1" data-ar="اتصال — الرقم الأول">Call Mobile 1</span></a>
+<a class="action" href="tel:+201141844414">☎ <span data-en="Call Mobile 2" data-ar="اتصال — الرقم الثاني">Call Mobile 2</span></a>
+<a class="action" href="https://wa.me/201026633202" target="_blank" rel="noopener">◉ <span data-en="WhatsApp" data-ar="واتساب">WhatsApp</span></a>
+<a class="action" href="mailto:m.goba369@smr-realestate.vip">✉ <span data-en="Email" data-ar="البريد الإلكتروني">Email</span></a>
+<a class="action full" href="https://www.smr-realestate.vip" target="_blank" rel="noopener">↗ <span data-en="Company Website" data-ar="موقع الشركة">Company Website</span></a></nav>
+<section class="details">
+<div class="detail"><span class="detail-label" data-en="MOBILE" data-ar="الموبايل">MOBILE</span><span>+20 102 663 3202</span></div>
+<div class="detail"><span class="detail-label" data-en="MOBILE" data-ar="الموبايل">MOBILE</span><span>+20 114 184 4414</span></div>
+<div class="detail"><span class="detail-label" data-en="EMAIL" data-ar="البريد الإلكتروني">EMAIL</span><span class="wrap">m.goba369@smr-realestate.vip</span></div>
+<div class="detail"><span class="detail-label" data-en="WEBSITE" data-ar="الموقع الإلكتروني">WEBSITE</span><a href="https://www.smr-realestate.vip" target="_blank" rel="noopener">www.smr-realestate.vip</a></div></section>
+<div class="bottom"><button type="button" id="saveContact" class="save-contact">＋ <span data-en="Save Contact" data-ar="حفظ جهة الاتصال">Save Contact</span></button>
+<p class="footer" data-en="Building success. Creating value." data-ar="نبني النجاح ونصنع القيمة.">Building success. Creating value.</p></div></main>
+<script>
+const enBtn=document.getElementById('enBtn'), arBtn=document.getElementById('arBtn'), identity=document.getElementById('identity');
+function setLanguage(lang){document.documentElement.lang=lang;identity.lang=lang;identity.dir=lang==='ar'?'rtl':'ltr';
+document.querySelectorAll('[data-en]').forEach(el=>{el.textContent=el.dataset[lang]});
+enBtn.classList.toggle('active',lang==='en');arBtn.classList.toggle('active',lang==='ar');}
+enBtn.addEventListener('click',()=>setLanguage('en'));arBtn.addEventListener('click',()=>setLanguage('ar'));
+document.getElementById('saveContact').addEventListener('click',()=>{
+const vcf='BEGIN:VCARD\\nVERSION:3.0\\nN:Ahmed;Mahmoud;;;\\nFN:Mahmoud Ahmed\\nORG:SMR - Success Marketing Real Estate\\nTITLE:Founder & CEO\\nTEL;TYPE=CELL:+201026633202\\nTEL;TYPE=CELL:+201141844414\\nEMAIL:m.goba369@smr-realestate.vip\\nURL:https://www.smr-realestate.vip\\nEND:VCARD';
+const blob=new Blob([vcf],{type:'text/vcard;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Mahmoud_Ahmed_SMR.vcf';a.click();URL.revokeObjectURL(a.href);});
+</script></body></html>
